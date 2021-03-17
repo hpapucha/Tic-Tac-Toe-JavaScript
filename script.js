@@ -54,17 +54,52 @@ function divsArray(e) {
   else if(divs[0].classList.contains("player2") && divs[4].classList.contains("player2") && divs[8].classList.contains("player2")){
     whoWon.innerHTML = "Player Blue Won"
   }
-  //Index 0-6 Column
+  //Index 0 Column
   else if(divs[0].classList.contains("player1") && divs[3].classList.contains("player1") && divs[6].classList.contains("player1")){
     whoWon.innerHTML = "Player Red Won"
   }
   else if(divs[0].classList.contains("player2") && divs[3].classList.contains("player2") && divs[6].classList.contains("player2")){
     whoWon.innerHTML = "Player Blue Won"
   }
+  //Index 1 Column
+  else if(divs[1].classList.contains("player1") && divs[4].classList.contains("player1") && divs[7].classList.contains("player1")){
+    whoWon.innerHTML = "Player Red Won"
+  }
+  else if(divs[1].classList.contains("player2") && divs[4].classList.contains("player2") && divs[7].classList.contains("player2")){
+    whoWon.innerHTML = "Player Blue Won"
+  }
+  //Index 2-6 Vertical
+  else if(divs[2].classList.contains("player1") && divs[4].classList.contains("player1") && divs[6].classList.contains("player1")){
+    whoWon.innerHTML = "Player Red Won"
+  }
+  else if(divs[2].classList.contains("player2") && divs[4].classList.contains("player2") && divs[6].classList.contains("player2")){
+    whoWon.innerHTML = "Player Blue Won"
+  }
+  //Index 2 Column
+  else if(divs[2].classList.contains("player1") && divs[5].classList.contains("player1") && divs[8].classList.contains("player1")){
+    whoWon.innerHTML = "Player Red Won"
+  }
+  else if(divs[2].classList.contains("player2") && divs[5].classList.contains("player2") && divs[8].classList.contains("player2")){
+    whoWon.innerHTML = "Player Blue Won"
+  }
+  //Index 3 Row
+  else if(divs[3].classList.contains("player1") && divs[4].classList.contains("player1") && divs[5].classList.contains("player1")){
+    whoWon.innerHTML = "Player Red Won"
+  }
+  else if(divs[3].classList.contains("player2") && divs[4].classList.contains("player2") && divs[5].classList.contains("player2")){
+    whoWon.innerHTML = "Player Blue Won"
+  }
+  //Index 6 Row
+  else if(divs[6].classList.contains("player1") && divs[7].classList.contains("player1") && divs[8].classList.contains("player1")){
+    whoWon.innerHTML = "Player Red Won"
+  }
+  else if(divs[6].classList.contains("player2") && divs[7].classList.contains("player2") && divs[8].classList.contains("player2")){
+    whoWon.innerHTML = "Player Blue Won"
+  }
 
 
 
-//end
+//function end
 }
 
 
