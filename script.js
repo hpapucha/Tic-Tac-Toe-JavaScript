@@ -1,11 +1,15 @@
 console.log("Script loaded")
-board = document.querySelector('.board')
+board = document.querySelector('.board');
 divs = document.querySelectorAll('.board div');
 div = document.querySelector('.board div');
 displayCurrentPlayer = document.querySelector('#current_player');
 whoWon = document.querySelector('#whoWon');
+redCounter = document.querySelector('#redCounter');
+blueCounter = document.querySelector('#blueCounter');
 let currentPlayer = "Red Player";
-let whoWonInitial = "No winner Yet";
+let whoWonInitial = "No winner yet!";
+let redCount = 0;
+let blueCount = 0;
 
 
 //Adding event listeners for the board divs
@@ -36,12 +40,11 @@ function divsArray(e) {
     console.log("Player error");
   }
 
-
-
   whoWon.innerHTML = whoWonInitial;
   //Index 0 Row
   if (divs[0].classList.contains("player1") && divs[1].classList.contains("player1") && divs[2].classList.contains("player1")) {
     whoWon.innerHTML = "Player Red Won"
+   // redCounter.innerHTML = toString(redCount);
     //  divs.setAttribute("style","pointer-events: none")
   }
   else if(divs[0].classList.contains("player2") && divs[1].classList.contains("player2") && divs[2].classList.contains("player2")){
@@ -97,23 +100,21 @@ function divsArray(e) {
     whoWon.innerHTML = "Player Blue Won"
   }
 
+  if (whoWon.innerText === "Player Red Won"){
+    redCount += 1;
+    console.log("red" + redCount);
+    redCounter.innerText = redCount;
+  }
+  else if(whoWon.innerText === "Player Blue Won"){
+    blueCount += 1;
+    console.log("Blue" +blueCount);
+    blueCounter.innerText = blueCount;
+  }
+
+
 
 
 //function end
 }
 
-
-
-
-
-
-//        <div class="" id="0-0">0-0</div>
-//         <div class="" id="0-1">0-1</div>
-//         <div class="" id="0-2">0-2</div>
-//         <div class="" id="1-0">1-0</div>
-//         <div class="" id="1-1">1-1</div>
-//         <div class="" id="1-2">1-2</div>
-//         <div class="" id="2-0">2-0</div>
-//         <div class="" id="2-1">2-1</div>
-//         <div class="" id="2-2">2-2</div>
 
