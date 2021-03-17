@@ -6,6 +6,7 @@ displayCurrentPlayer = document.querySelector('#current_player');
 whoWon = document.querySelector('#whoWon');
 redCounter = document.querySelector('#redCounter');
 blueCounter = document.querySelector('#blueCounter');
+refreshButton = document.querySelector('#btn');
 let currentPlayer = "Red Player";
 let whoWonInitial = "No winner yet!";
 let redCount = 0;
@@ -13,12 +14,11 @@ let blueCount = 0;
 
 
 //Adding event listeners for the board divs
-divs.forEach(element => {
-  element.addEventListener('click', divsArray, { once: true } );
-  if (whoWon.innerHTML === "Player1 Won"){
-    element.removeEventListener("click", divsArray, true);
-  }
-})
+
+  divs.forEach(element => {
+    element.addEventListener('click', divsArray, {once: true});
+  })
+
 
 function divsArray(e) {
 
@@ -112,9 +112,16 @@ function divsArray(e) {
   }
 
 
-
-
 //function end
 }
 
 
+document.querySelector("#btn").addEventListener("click", reset);
+reset();
+function reset(){
+  divs.forEach(element => {
+    element.addEventListener('click', divsArray, {once: true});
+  })
+  for(let i = 0; i < divs.length; i++){
+  divs[i].className = "";
+}}
