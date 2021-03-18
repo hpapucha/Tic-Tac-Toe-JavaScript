@@ -69,8 +69,11 @@ Possible further development:
 - Adding and fixing the current CSS styling to be more presentable for mobile devices.
 - Adding an AI feature.
 - Adding sounds for when the game is finished or different theme (Star Wars?)
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 4af6f19537752a875232fa53dc3f78797b9dbc80
