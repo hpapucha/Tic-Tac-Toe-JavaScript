@@ -1,7 +1,7 @@
 # Tic_Tac_Toe_Game readme.
 
 Goal: To create a Tic Tac Toe game, played by two players on the same
-computer.
+computer.  <a href="https://hpapucha.github.io/Tic_Tac_Toe_Game/">Link Here</a>
 
 Deliverables: 
 Bronze MVP: 
@@ -39,6 +39,20 @@ or blue in a row or column, printout win condition.
 - Popout a win alert box, stating which player won.
 - Create two boxes with numbers, which are updated when the page isn't being refreshed
   
+User Stories:
+
+- As a user, I should be able to start a new tic tac toe game
+- As a user, I should be able to click on a square to add Red first and then Blue, and so on
+- As a user, I should be shown a message after each turn for if I win, lose, tie or which turn it is next
+- As a user, I should not be able to click the same square twice
+- As a user, I should be shown a message when I win, lose or tie
+- As a user, I should not be able to continue playing once I win, lose, or tie
+- As a user, I should be able to play the game again without refreshing the page
+- As a user, I should be able to see a counter with wins for Blue and Red
+
+Final Solution Pictures:
+
+![Initial Game](/images/initial.png)
 
 
 
