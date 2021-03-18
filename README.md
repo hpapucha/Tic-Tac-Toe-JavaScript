@@ -1,6 +1,7 @@
 # Tic_Tac_Toe_Game readme.
 
-Goal: To create a Tic Tac Toe game, played by two players on the same
+Goal 
+- To create a Tic Tac Toe game, played by two players on the same
 computer.  <a href="https://hpapucha.github.io/Tic_Tac_Toe_Game/">Link Here</a>
 
 Deliverables: 
@@ -52,7 +53,15 @@ User Stories:
 
 Final Solution Pictures:
 
-![Initial Game](/images/initial.png)
+![Initial Game](./images/initial.png)
+
+Technologies used:
+
+Approach and Roadblocks:
+
+What is next:
+
+
 
 
 

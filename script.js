@@ -11,7 +11,6 @@ let currentPlayer = "Red Player";
 let whoWonInitial = "No winner!";
 let redCount = 0;
 let blueCount = 0;
-let endGame = false;
 
 //Adding event listeners for the board divs
 function listen() {
@@ -19,11 +18,7 @@ function listen() {
     element.addEventListener('click', divsArray, {once: true})
   })
 }
-
-// function removeEventListeners(){
-//  if (whoWonInitial !== "No winner yet!") {
-//   divs.forEach(divs => divs.removeEventListener('click', listen));
-// }}
+//Removing event listeners after a win condition is met
 function removeEventListeners()
 {
   divs.forEach(function(element) {
@@ -31,7 +26,7 @@ function removeEventListeners()
   })
 }
 
-
+//Call event listeners and start the game logic
 listen();
 
 function divsArray(e) {
@@ -52,7 +47,7 @@ function divsArray(e) {
   else {
     console.log("Player error");
   }
-
+//Win conditions
   whoWon.innerHTML = whoWonInitial;
   //Index 0 Row
   if (divs[0].classList.contains("player1") && divs[1].classList.contains("player1") && divs[2].classList.contains("player1")) {
@@ -125,10 +120,11 @@ function divsArray(e) {
     removeEventListeners()
   }
 
-
-
 //function end
 }
+
+//Button event listener and reset function which reinit event listeners and reset
+//div classes
 document.querySelector("#btn").addEventListener("click", reset);
 function reset() {
   listen()
