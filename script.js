@@ -11,16 +11,28 @@ let currentPlayer = "Red Player";
 let whoWonInitial = "No winner yet!";
 let redCount = 0;
 let blueCount = 0;
+let endGame = false;
 
 //Adding event listeners for the board divs
-  divs.forEach(function(element) {
+function listen() {
+  divs.forEach(function (element) {
     element.addEventListener('click', divsArray, {once: true})
   })
+}
 
 // function removeEventListeners(){
-//  if (whoWon.value === "Player Red Won") {
-//   divs.forEach(divs => divs.removeEventListener('click', divsArray));
+//  if (whoWonInitial !== "No winner yet!") {
+//   divs.forEach(divs => divs.removeEventListener('click', listen));
 // }}
+function removeEventListeners()
+{
+  divs.forEach(function(element) {
+    element.removeEventListener('click', divsArray)
+  })
+}
+
+
+listen();
 
 function divsArray(e) {
 
@@ -45,7 +57,6 @@ function divsArray(e) {
   //Index 0 Row
   if (divs[0].classList.contains("player1") && divs[1].classList.contains("player1") && divs[2].classList.contains("player1")) {
     whoWon.innerHTML = "Player Red Won"
-
 
   }
   else if(divs[0].classList.contains("player2") && divs[1].classList.contains("player2") && divs[2].classList.contains("player2")){
@@ -89,6 +100,7 @@ function divsArray(e) {
   //Index 3 Row
   else if(divs[3].classList.contains("player1") && divs[4].classList.contains("player1") && divs[5].classList.contains("player1")){
     whoWon.innerHTML = "Player Red Won"
+
   }
   else if(divs[3].classList.contains("player2") && divs[4].classList.contains("player2") && divs[5].classList.contains("player2")){
     whoWon.innerHTML = "Player Blue Won"
@@ -103,29 +115,26 @@ function divsArray(e) {
   //If a winner is decided increment the red/blue counters
   if (whoWon.innerText === "Player Red Won"){
     redCount += 1;
-    console.log("red" + redCount);
     redCounter.innerText = redCount;
-    //reset();
+    removeEventListeners()
 
   }
   else if(whoWon.innerText === "Player Blue Won"){
     blueCount += 1;
-    console.log("Blue" +blueCount);
     blueCounter.innerText = blueCount;
-    //reset();
+    removeEventListeners()
   }
+
+
 
 //function end
 }
-
-// function reset() {
-//   document.querySelector("#btn").addEventListener("click", reset);
-//   divs.forEach(function (element) {
-//     element.addEventListener('click', divsArray) //{once: true})
-//   })
-//   {
-//     for (let i = 0; i < divs.length; i++) {
-//       divs[i].className = "";
-//     }
-//   }
-// }
+document.querySelector("#btn").addEventListener("click", reset);
+function reset() {
+  listen()
+  {
+    for (let i = 0; i < divs.length; i++) {
+      divs[i].className = "";
+    }
+  }
+}
