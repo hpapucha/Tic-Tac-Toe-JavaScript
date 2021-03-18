@@ -1,25 +1,44 @@
 body{
     background-color: tan;
-
     font-family:"Helvetica Neue", Helvetica, sans-serif;
-
 }
 
 h1{
     color:whitesmoke;
-    text-align: center;
+    position: relative;
+    left: 35%;
+
     text-shadow:2px 1px 0 #666;
 }
 
+nav {
+    position: relative;
+    left: 35%;
+    display: grid;
+    grid-template-columns: repeat(3, 5em);
+    grid-gap: 0.5em;
+    height:100%;
+    width:100%;
+    margin-bottom: 1em;
+}
 #current_player{
     position: relative;
     left: 35%;
-    padding: 3%;
-    height: 2em;
-    background-color:whitesmoke;
-    width: 10em;
+    padding: 2%;
+    height: 15px;
+    background-color:coral;
+    width: 8.5em;
     margin-bottom: 1em;
-    text-align: center;
+
+}
+
+#turn {
+    position: relative;
+    padding: 2%;
+    height: 15px;
+    background-color:coral;
+    width: 12em;
+    margin-bottom: 1em;
 
 }
 #whoWon {
@@ -34,8 +53,6 @@ h1{
     grid-gap: 0.5em;
     height:100%;
     width:100%;
-
-
 }
 
 .board > div {
@@ -43,7 +60,6 @@ h1{
     height:5em;
     width:5em;
     text-align: center;
-
 }
 
 .player1 {
@@ -57,3 +73,36 @@ h1{
 .board > div:hover {
     transform: scale(1.1);
 }
+
+.info_field {
+    position: relative;
+    left: 35%;
+    display: grid;
+    grid-template-columns: repeat(3, 5em);
+    grid-gap: 0.5em;
+    height:100%;
+    width:100%;
+    margin-top: 1em;
+}
+#redCounter {
+    position: relative;
+    left: 35%;
+    padding: 3%;
+    height: 25px;
+    background-color:red;
+    width: 30px;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+#blueCounter {
+    position: relative;
+    left: 30%;
+    padding: 3%;
+    height: 25px;
+    background-color:blue;
+    width: 30px;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
