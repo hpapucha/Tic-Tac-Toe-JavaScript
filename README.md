@@ -53,7 +53,7 @@ User Stories:
 
 Final Solution Pictures:
 
-![Initial Game](./images/initial.png)
+![InitialImage](/Images/initial.png)
 
 Technologies used:
 
