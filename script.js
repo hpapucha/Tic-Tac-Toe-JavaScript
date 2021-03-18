@@ -7,11 +7,10 @@ whoWon = document.querySelector('#whoWon');
 redCounter = document.querySelector('#redCounter');
 blueCounter = document.querySelector('#blueCounter');
 refreshButton = document.querySelector('#btn');
-let currentPlayer = "Red Player";
+let currentPlayer = "Red Player"; //Inner HTML variables
 let whoWonInitial = "No winner!";
-let redCount = 0;
+let redCount = 0; //Counters for red and blue
 let blueCount = 0;
-
 //Adding event listeners for the board divs
 function listen() {
   divs.forEach(function (element) {
@@ -25,7 +24,6 @@ function removeEventListeners()
     element.removeEventListener('click', divsArray)
   })
 }
-
 //Call event listeners and start the game logic
 listen();
 
@@ -52,7 +50,6 @@ function divsArray(e) {
   //Index 0 Row
   if (divs[0].classList.contains("player1") && divs[1].classList.contains("player1") && divs[2].classList.contains("player1")) {
     whoWon.innerHTML = "Red Won!"
-
   }
   else if(divs[0].classList.contains("player2") && divs[1].classList.contains("player2") && divs[2].classList.contains("player2")){
     whoWon.innerHTML = "Blue Won!"
@@ -95,7 +92,6 @@ function divsArray(e) {
   //Index 3 Row
   else if(divs[3].classList.contains("player1") && divs[4].classList.contains("player1") && divs[5].classList.contains("player1")){
     whoWon.innerHTML = "Red Won!"
-
   }
   else if(divs[3].classList.contains("player2") && divs[4].classList.contains("player2") && divs[5].classList.contains("player2")){
     whoWon.innerHTML = "Blue Won!"
@@ -119,10 +115,8 @@ function divsArray(e) {
     blueCounter.innerText = blueCount;
     removeEventListeners()
   }
-
 //function end
 }
-
 //Button event listener and reset function which reinit event listeners and reset
 //div classes
 document.querySelector("#btn").addEventListener("click", reset);
@@ -131,6 +125,4 @@ function reset() {
   {
     for (let i = 0; i < divs.length; i++) {
       divs[i].className = "";
-    }
-  }
-}
+    }}}
