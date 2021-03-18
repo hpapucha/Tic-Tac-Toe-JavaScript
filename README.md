@@ -16,7 +16,6 @@ Silver MVP:
 - Hoover animations for the squares
 - Responsive design
 
-
 Gold MVP:
 - Silver MVP features +
 - Refresh button. 
@@ -53,16 +52,20 @@ User Stories:
 
 Final Solution Pictures:
 
-![InitialImage](/Images/initial.png)
+![Initial Game](/Images/initial.png)
+![Finished Game](/Images/gameDone.png)
 
 Technologies used:
+- HTML/CSS/Vanilla JavaScript
 
 Approach and Roadblocks:
+- I approached this by using functional structure with mostly if/else statements.
+- Style properties were brought down to the minimum, as I wanted to go for more clean look and fewer colors in general.
+- Roadblocks included: Setting the innerHTML texts to change, minor issues here and there
+with the events and logic. The biggest roadblock, which took 10-15% of the time, was how to
+  disable event listeners after the game is done and reset the board.
 
-What is next:
-
-
-
-
-
-
+Possible further development:
+- Adding and fixing the current CSS styling to be more presentable for mobile devices.
+- Adding an AI feature.
+- Adding sounds for when the game is finished or different theme (Star Wars?)
