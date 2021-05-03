@@ -2,7 +2,7 @@
 
 Goal 
 - To create a Tic Tac Toe game, played by two players on the same
-computer.  <a href="https://hpapucha.github.io/Tic_Tac_Toe_Game/">Link Here</a>
+computer.  <a href="https://hpapucha.github.io/Tic-Tac-Toe-JavaScript/">Link Here</a>
 
 Deliverables: 
 Bronze MVP: 
